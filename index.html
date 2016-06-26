@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+});
+
+function body_onload(){
+	setInterval(update_ui, 1000);
+}
+
+function update_ui(){
+	console.log("update_ui called");
+	var date = new Date();
+	var str = date.getTime();
+	var call = "0.jpg?"+str;
+	console.log(call);
+	var img = $("#imagee");
+	img.attr("src",call);
+}
+
+</script>
+</head>
+<body onload="body_onload();">
+
+<img id="imagee" src="">
+
+</body>
+</html>
+
