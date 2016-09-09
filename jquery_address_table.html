@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Address Book</title>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+		<script type="text/javascript">
+			jQuery.noConflict();
+			var j$ = jQuery;
+		</script>
+
+<!-- // $(document).ready(function() {
+				 
+// 		        $('#table').bootstrapTable({
+// 				    columns: [{
+// 				        field: 'id',
+// 				        title: 'Item ID'
+// 				    }, {
+// 				        field: 'name',
+// 				        title: 'Item Name'
+// 				    }, {
+// 				        field: 'price',
+// 				        title: 'Item Price'
+// 				    }],
+// 				    data: [{
+// 				        id: 1,
+// 				        name: 'Item 1',
+// 				        price: '$1'
+// 				    }, {
+// 				        id: 2,
+// 				        name: 'Item 2',
+// 				        price: '$2'
+// 				    }]
+// 				});
+
+
+// 				var URL = "http://joquery.com";
+// 				var Year = 2012;
+// 				var TitleEncoded = "string-format-for-javascript";
+// 				var Title = "string.format for Javascript";
+
+// 				var Link = String.format("<a href=\"{0}/{1}/{2}\" title=\"{3}\">{3}</a>", URL, Year, TitleEncoded, Title);
+// 				// alert(Link);	
+
+// 			} );
+ -->
+		</script>
+		
+		<!-- Latest compiled and minified CSS -->
+<!-- Optional theme -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+	
+</script> -->
+
+<!-- Latest compiled and minified CSS -->
+
+
+<!-- Latest compiled and minified JavaScript -->
+
+<!-- <link rel="stylesheet" href="/home/kangmg/node/node_modules/bootstrap-table/dist/bootstrap-table.min.css"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="https://rawgit.com/CautemocSg/ng-ip-address/master/ngIpAddress.min.js"></script>
+		<script>
+
+// var startpoint = "1";
+// var startseach = "0";
+// var int_reg_no = 0;
+// var login_type;
+// var auth_type=0;
+
+	
+		// String.format = function() {
+		// // The string containing the format items (e.g. "{0}")
+		// // will and always has to be the first argument.
+		// 	var theString = arguments[0];
+
+		// 	// start with the second argument (i = 1)
+		// 	for (var i = 1; i < arguments.length; i++) {
+		// 		// "gm" = RegEx options for Global search (more than one instance)
+		// 		// and for Multiline search
+		// 		var regEx = new RegExp("\\{" + (i - 1) + "\\}", "gm");
+		// 		theString = theString.replace(regEx, arguments[i]);
+		// 	}
+
+		// 	return theString;
+		// }
+
+
+
+		      // var i=0;
+		
+			
+
+				
+
+	// function addTableRow(jQtable){
+	// 	jQtable.each(function(){
+	// 		var tds = '<tr>';
+	// 		jQuery.each($('tr:last td', this), function() {tds += '<td>'+$(this).html()+'</td>';});
+	// 		tds += '</tr>';
+	// 		if($('tbody', this).length > 0){$('tbody', this).append(tds);
+	// 		}else {$(this).append(tds);}
+	// 	});
+	// }
+
+	// $(function(){
+	// 	$('table').on('click','tr a',function(e){
+	// 	   e.preventDefault();
+	// 	  $(this).parents('tr').remove();
+	// 	});
+	// });
+
+	
+
+
+function body_onload()
+{
+	// loading_visible(1);
+	// parent.leftpanel.location.href = '/eng/home/address_left_panel.html';
+	// auth_check();
+	// sb_search_changed();
+	// language_type();
+	// new_data();
+
+	
+
+}
+
+
+// var app = angular.module("MyApp", []);
+console.log("d");
+var app = angular.module('MyApp',['ng-ip-address']);
+console.log("e");
+// var app = angular.module('app', ['ng-ip-address']);
+// var app2 = angular.module("MyApp2", ['ng-ip-address']);
+
+
+// app.controller('MainController', ['$scope', function($scope) {
+//   $scope.allowPort = {
+//     allowPort: true
+//   };
+ 
+// }]);
+
+app.controller('MainController', [ '$scope', function($scope) {
+
+	$scope.rows = [1,2,3,4,5,6,7,8,9,10];
+	// $scope.allowPort = {allowPort: true};
+	// $scope.requirePort = {requirePort: true};
+	// $scope.portConfig = {allowPort: true, requirePort: false};
+
+	// $scope.counter = 3;
+
+	// $scope.addRow = function() {
+
+	// 	$scope.rows.push('Row ' + $scope.counter);
+	// 	$scope.counter++;
+ //  	}
+
+  	// $scope.delete_ =  function($scope){
+  	// 	console.log(this);
+  	// }
+}]);
+
+
+
+</script>
+</head>
+
+  <body  ng-app="MyApp" ng-controller="MainController">
+   
+<table >
+  <thead>
+    <tr>
+      <th >IP Address</th>
+      <!-- <th width="200"></th> -->
+    </tr>
+  </thead>
+  <tbody>
+      <!-- <td><input type="text" ng-model="ipAddress" id="allowed_ipaddress_{{$index}}" ng-ip-address /></td> -->
+    <tr ng-repeat="rowContent in rows">
+    <!-- <tr> -->
+      <td>
+      		<label>IP Address</label>
+        		<input type="text" id="allowed_ipaddress_{{$index}}" name="allowed_ipaddress_{{$index}}" ng-model="ipAddress1" ng-ip-address />
+      </td>
+      
+    </tr>
+       <!-- <td><input type='text' ng-model='ip' id="allowed_ipaddress_{{$index}}" ng-pattern='/^([0-9]{1,3})[.]([0-9]{1,3})[.]([0-9]{1,3})[.]([0-9]{1,3})$/' placeholder='0.0.0.0'  /></td> -->
+  </tbody>
+</table>    
+    
+  </body>
+  </html>
